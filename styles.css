@@ -455,6 +455,53 @@ h2 {
   background: linear-gradient(90deg, var(--green), var(--teal));
 }
 
+.bar-fill.hand-backhand {
+  background: linear-gradient(90deg, var(--blue), var(--teal));
+}
+
+.bar-fill.calories-fill {
+  background: linear-gradient(90deg, var(--orange), var(--yellow));
+}
+
+.hand-preview {
+  overflow: hidden;
+}
+
+.hand-split {
+  display: grid;
+  grid-template-columns: 104px 1fr;
+  gap: 16px;
+  align-items: center;
+  margin: 8px 0 12px;
+}
+
+.hand-ring {
+  display: grid;
+  place-items: center;
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, #101311 0 54%, transparent 55%),
+    conic-gradient(var(--green) 0 var(--forehand), var(--blue) var(--forehand) 100%);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.hand-ring span {
+  color: white;
+  font-size: 24px;
+  font-weight: 950;
+}
+
+.hand-bars {
+  min-width: 0;
+}
+
+.hand-hero::after {
+  border-left-color: rgba(106, 168, 255, 0.48);
+  border-bottom-color: rgba(47, 209, 119, 0.34);
+}
+
 .timeline-list,
 .feed-list {
   display: grid;
@@ -825,5 +872,9 @@ h2 {
 
   .bar-row {
     grid-template-columns: 64px 1fr 42px;
+  }
+
+  .hand-split {
+    grid-template-columns: 1fr;
   }
 }
