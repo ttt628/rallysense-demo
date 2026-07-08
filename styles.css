@@ -590,7 +590,7 @@ h2 {
 
 .watch-shell {
   width: 226px;
-  aspect-ratio: 0.82;
+  aspect-ratio: 0.76;
   margin: 0 auto 14px;
   padding: 12px;
   border-radius: 42px;
@@ -599,9 +599,11 @@ h2 {
 }
 
 .watch-screen {
+  display: flex;
+  flex-direction: column;
   height: 100%;
   overflow: hidden;
-  padding: 18px;
+  padding: 16px;
   border-radius: 30px;
   color: white;
   background:
@@ -611,22 +613,28 @@ h2 {
 
 .watch-title {
   font-weight: 950;
+  line-height: 1.18;
+  flex-shrink: 0;
 }
 
 .watch-time {
-  margin: 12px 0;
-  font-size: 38px;
+  margin: 8px 0 10px;
+  font-size: 34px;
   font-weight: 950;
   letter-spacing: 0;
+  line-height: 1;
+  flex-shrink: 0;
 }
 
 .watch-stat {
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  padding: 7px 0;
+  padding: 5px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.7);
+  line-height: 1.2;
+  flex-shrink: 0;
 }
 
 .watch-stat strong {
@@ -635,12 +643,13 @@ h2 {
 
 .watch-cta {
   width: 100%;
-  min-height: 38px;
-  margin-top: 10px;
+  min-height: 36px;
+  margin-top: auto;
   border-radius: 999px;
   color: var(--black);
   background: var(--mint);
   font-weight: 900;
+  flex-shrink: 0;
 }
 
 .watch-actions,
