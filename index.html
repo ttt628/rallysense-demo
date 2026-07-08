@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RallySense Interactive Demo</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">RS</div>
+          <div>
+            <strong>RallySense</strong>
+            <span>羽毛球智能复盘</span>
+          </div>
+        </div>
+
+        <nav class="side-nav" aria-label="产品功能">
+          <button class="active" data-view="today">今日复盘</button>
+          <button data-view="watch">Watch 记录</button>
+          <button data-view="score">局末快录</button>
+          <button data-view="rallies">关键回合</button>
+          <button data-view="training">训练建议</button>
+          <button data-view="history">历史趋势</button>
+          <button data-view="settings">设置</button>
+        </nav>
+
+        <div class="sync-card">
+          <span class="sync-dot"></span>
+          <div>
+            <strong>Watch 已连接</strong>
+            <p>最近同步：刚刚</p>
+          </div>
+        </div>
+      </aside>
+
+      <section class="workspace">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">MVP 可交互产品 Demo</p>
+            <h1 id="viewTitle">今日复盘</h1>
+          </div>
+          <div class="top-actions">
+            <button class="ghost-button" id="resetDemo">重置演示</button>
+            <button class="primary-button" id="startSession">开始一场球</button>
+          </div>
+        </header>
+
+        <section class="main-grid">
+          <div class="phone-frame">
+            <div class="phone-speaker"></div>
+            <div class="phone-screen" id="phoneScreen"></div>
+          </div>
+
+          <aside class="control-panel">
+            <div class="watch-card">
+              <div class="watch-shell">
+                <div class="watch-screen" id="watchScreen"></div>
+              </div>
+              <div class="watch-actions">
+                <button data-watch="home">首页</button>
+                <button data-watch="live">运动中</button>
+                <button data-watch="score">录比分</button>
+              </div>
+            </div>
+
+            <div class="action-stack">
+              <h2>功能演示</h2>
+              <button data-demo-action="mark">保存关键回合</button>
+              <button data-demo-action="score">录入本局比分</button>
+              <button data-demo-action="tag">给回合补标签</button>
+              <button data-demo-action="advice">生成训练建议</button>
+              <button data-demo-action="export">导出复盘摘要</button>
+            </div>
+
+            <div class="status-feed">
+              <h2>实时反馈</h2>
+              <ul id="eventFeed"></ul>
+            </div>
+          </aside>
+        </section>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <div class="modal" id="modal" aria-hidden="true">
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-head">
+          <div>
+            <p class="eyebrow" id="modalKicker">Demo Action</p>
+            <h2 id="modalTitle">功能演示</h2>
+          </div>
+          <button class="icon-button" id="closeModal" aria-label="关闭">×</button>
+        </div>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
